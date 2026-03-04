@@ -1,53 +1,54 @@
-# Claude Code Skills
+# Claude Code 技能集合
 
-Personal collection of custom Claude Code skills for enhancing development workflow.
+个人编写的 Claude Code 技能集合，用于增强开发工作流程。
 
-## What are Skills?
+## 什么是技能？
 
-Skills are reusable, context-aware prompts that guide Claude Code in handling specific tasks. They provide structured workflows, best practices, and domain-specific knowledge.
+技能是可复用、具有上下文感知能力的提示，用于指导 Claude Code 处理特定任务。它们提供结构化的工作流程、最佳实践和领域特定知识。
 
-## Available Skills
+## 可用技能
 
-### [meeting-summary](skills/meeting-summary/)
-智能会议总结助手 - 将会议录音/内容整理成结构化会议纪要。
+### [odoo-po-translator](skills/odoo-po-translator/)
+Odoo .po 文件简体中文汉化工具 - 自动翻译空条目、辅助翻译/校对、检测翻译质量问题。保持占位符格式、处理复数形式、维护术语一致性。
 
-**Usage:**
-- 会议录音文件（音频或视频）
-- 会议逐字稿/转录文本
-- 会议笔记或草稿
-- 需要整理的会议记录
+**使用场景：**
+- 翻译 Odoo .po 文件或 .pot 文件
+- 检查 .po 文件的翻译质量
+- 汉化 Odoo 模块
+- 保持 Odoo 术语翻译一致性
+- 修复 .po 文件中的翻译问题
 
-## Installation
+## 安装
 
-To use these skills in Claude Code:
+要在 Claude Code 中使用这些技能：
 
-1. Clone this repository to your local machine
-2. Install skills using Claude Code's skill management system
+1. 将此仓库克隆到本地
+2. 使用 Claude Code 的技能管理系统安装技能
 
-## Development
+## 开发
 
-Adding a new skill:
+添加新技能：
 
-1. Create a new directory under `skills/`
-2. Create a `SKILL.md` file with the following format:
+1. 在 `skills/` 下创建一个新目录
+2. 创建一个 `SKILL.md` 文件，格式如下：
 
 ```yaml
 ---
 name: skill-name
-description: Brief description of what this skill does
+description: 技能功能的简短描述
 ---
 
-# Skill Title
+# 技能标题
 
-## Usage
-When to use this skill...
+## 使用时机
+何时使用此技能...
 
-## Workflow
-Step-by-step instructions...
+## 处理流程
+逐步说明...
 ```
 
-3. Test the skill thoroughly before committing
+3. 在提交前彻底测试该技能
 
-## License
+## 许可证
 
 MIT

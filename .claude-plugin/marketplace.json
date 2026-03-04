@@ -17,6 +17,15 @@
       "skills": [
         "./skills/meeting-summary"
       ]
+    },
+    {
+      "name": "odoo-po-translator",
+      "description": "Odoo .po 文件简体中文汉化工具 - 自动翻译、质量检查、术语一致性维护",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/odoo-po-translator"
+      ]
     }
   ]
 }
