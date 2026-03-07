@@ -18,7 +18,7 @@
 
 2. **在 WSL 中安装 OpenCode**
 
-WSL 设置完成后，打开 WSL 终端，使用任一 [安装方式](https://opencode.ai/docs/) 安装 OpenCode。
+WSL 设置完成后，打开 WSL 终端，使用任一 [安装方式](01-简介.md) 安装 OpenCode。
 
 
 

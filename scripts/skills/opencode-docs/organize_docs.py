@@ -179,11 +179,15 @@ def organize(raw_root: Path, out_root: Path) -> tuple[dict[str, str], dict]:
         if slug == "":
             url_map["/docs/zh-cn"] = dest_rel
             url_map["/docs/zh-cn/"] = dest_rel
+            url_map["/docs"] = dest_rel
+            url_map["/docs/"] = dest_rel
             url_map["/index.md"] = dest_rel
             url_map["/docs/zh-cn/index.md"] = dest_rel
         else:
             url_map[f"/docs/zh-cn/{slug}"] = dest_rel
             url_map[f"/docs/zh-cn/{slug}/"] = dest_rel
+            url_map[f"/docs/{slug}"] = dest_rel
+            url_map[f"/docs/{slug}/"] = dest_rel
 
     nav = {
         "top": [

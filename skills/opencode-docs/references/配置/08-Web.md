@@ -24,7 +24,7 @@ opencode web
 
 ## [配置](08-Web.md#%E9%85%8D%E7%BD%AE)
 
-你可以通过命令行标志或 [配置文件](https://opencode.ai/docs/config) 来配置 Web 服务器。
+你可以通过命令行标志或 [配置文件](../02-配置.md) 来配置 Web 服务器。
 
 ### [端口](08-Web.md#%E7%AB%AF%E5%8F%A3)
 

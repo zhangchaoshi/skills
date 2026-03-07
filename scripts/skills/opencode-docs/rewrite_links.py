@@ -12,6 +12,11 @@ from urllib.parse import urlparse, unquote
 
 FENCE_RE = re.compile(r"^\s*(```+|~~~+)")
 URL_MAP: dict[str, str] = {}
+FRAGMENT_MAP: dict[tuple[str, str], str] = {
+    # zh-cn 导出后的配置文档使用中文锚点，这里兼容官网英文锚点。
+    ("/docs/config", "#precedence-order"): "#%E4%BC%98%E5%85%88%E7%BA%A7%E9%A1%BA%E5%BA%8F",
+    ("/docs/zh-cn/config", "#precedence-order"): "#%E4%BC%98%E5%85%88%E7%BA%A7%E9%A1%BA%E5%BA%8F",
+}
 
 
 @dataclass(frozen=True)
@@ -42,8 +47,8 @@ def _unescape_slashes(value: str) -> str:
 
 def _normalize_docs_url(target: str) -> str | None:
     """
-    If target is an opencode docs zh-cn URL/path, normalize it to a path like:
-      /docs/zh-cn[/...]
+    If target is an opencode docs URL/path, normalize it to:
+      /docs/zh-cn[/...] or /docs[/...]
     Otherwise return None.
     """
     t = _unescape_slashes(target.strip())
@@ -62,14 +67,14 @@ def _normalize_docs_url(target: str) -> str | None:
     if "?" in path:
         path = path.split("?", 1)[0]
 
-    if not path.startswith("/docs/zh-cn"):
-        # Also allow legacy absolute "/index.md" which points to the docs home
+    if not (path.startswith("/docs/zh-cn") or path.startswith("/docs")):
+        # Also allow legacy absolute "/index.md" which points to the docs home.
         if path == "/index.md":
             return "/index.md"
         return None
 
     # Remove trailing slash (except the root)
-    if path != "/docs/zh-cn" and path.endswith("/"):
+    if path not in {"/docs/zh-cn", "/docs"} and path.endswith("/"):
         path = path[:-1]
 
     return unquote(path)
@@ -201,7 +206,8 @@ def rewrite_file(file_path: Path, mirror_root: Path) -> tuple[int, int]:
             current_rel = file_path.relative_to(mirror_root)
             current_dir = current_rel.parent
             replacement_path = os.path.relpath(local_rel.as_posix(), start=current_dir.as_posix())
-            replacement = f"{replacement_path}{frag}"
+            replacement_frag = FRAGMENT_MAP.get((norm, frag), frag)
+            replacement = f"{replacement_path}{replacement_frag}"
 
             # Preserve <> wrapper if originally used
             if t.raw.startswith("<") and t.raw.endswith(">"):

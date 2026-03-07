@@ -6,7 +6,7 @@
 
 OpenCode CLI 选项和命令。
 
-OpenCode CLI 在不带任何参数运行时，默认启动 [TUI](https://opencode.ai/docs/tui)。
+OpenCode CLI 在不带任何参数运行时，默认启动 [TUI](01-TUI.md)。
 
 ```
 opencode
@@ -176,7 +176,7 @@ opencode github [command]
 opencode github install
 ```
 
-此命令会设置必要的 GitHub Actions 工作流并引导您完成配置过程。 [了解更多](https://opencode.ai/docs/github)。
+此命令会设置必要的 GitHub Actions 工作流并引导您完成配置过程。 [了解更多](../配置/09-GitHub.md)。
 
 * * *
 
@@ -289,7 +289,7 @@ opencode models [provider]
 
 此命令以 `provider/model` 的格式显示所有已配置提供商中可用的模型。
 
-这对于确定在 [配置文件](https://opencode.ai/docs/config/) 中使用的确切模型名称非常有用。
+这对于确定在 [配置文件](../02-配置.md) 中使用的确切模型名称非常有用。
 
 您可以选择传入提供商 ID 来按提供商筛选模型。
 
@@ -359,7 +359,7 @@ opencode run --attach http://localhost:4096 "Explain async/await in JavaScript"
 
 ### [serve](02-CLI.md#serve)
 
-启动无界面的 OpenCode 服务器以提供 API 访问。查看 [服务器文档](https://opencode.ai/docs/server) 了解完整的 HTTP 接口。
+启动无界面的 OpenCode 服务器以提供 API 访问。查看 [服务器文档](../配置/07-服务器.md) 了解完整的 HTTP 接口。
 
 ```
 opencode serve

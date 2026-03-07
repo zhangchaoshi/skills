@@ -79,7 +79,7 @@ OpenCode Zen 的工作方式与 OpenCode 中的任何其他提供商相同。
 | Qwen3 Coder 480B | qwen3-coder | `https://opencode.ai/zen/v1/chat/completions` | `@ai-sdk/openai-compatible` |
 | Big Pickle | big-pickle | `https://opencode.ai/zen/v1/chat/completions` | `@ai-sdk/openai-compatible` |
 
-在 OpenCode 配置中， [模型 ID](https://opencode.ai/docs/config/#models) 使用 `opencode/<model-id>` 格式。例如，对于 GPT 5.2 Codex，你需要在配置中使用 `opencode/gpt-5.2-codex`。
+在 OpenCode 配置中， [模型 ID](../02-配置.md#models) 使用 `opencode/<model-id>` 格式。例如，对于 GPT 5.2 Codex，你需要在配置中使用 `opencode/gpt-5.2-codex`。
 
 * * *
 
@@ -138,7 +138,7 @@ https://opencode.ai/zen/v1/models
 | GPT 5 Codex | $1.07 | $8.50 | $0.107 | - |
 | GPT 5 Nano | 免费 | 免费 | 免费 | - |
 
-你可能会在使用记录中看到 _Claude Haiku 3.5_。这是一个 [低成本模型](https://opencode.ai/docs/config/#models)，用于生成会话标题。
+你可能会在使用记录中看到 _Claude Haiku 3.5_。这是一个 [低成本模型](../02-配置.md#models)，用于生成会话标题。
 
 免费模型说明：
 

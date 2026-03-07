@@ -60,7 +60,7 @@ How is auth handled in @packages/functions/src/api/index.ts?
 /help
 ```
 
-大多数命令还支持以 `ctrl+x` 作为前导键的快捷键，其中 `ctrl+x` 是默认前导键。 [了解更多](https://opencode.ai/docs/keybinds)。
+大多数命令还支持以 `ctrl+x` 作为前导键的快捷键，其中 `ctrl+x` 是默认前导键。 [了解更多](04-快捷键.md)。
 
 以下是所有可用的斜杠命令：
 
@@ -150,7 +150,7 @@ How is auth handled in @packages/functions/src/api/index.ts?
 
 ### [init](01-TUI.md#init)
 
-创建或更新 `AGENTS.md` 文件。 [了解更多](https://opencode.ai/docs/rules)。
+创建或更新 `AGENTS.md` 文件。 [了解更多](../配置/03-规则.md)。
 
 ```
 /init
@@ -210,7 +210,7 @@ How is auth handled in @packages/functions/src/api/index.ts?
 
 * * *
 
-分享当前会话。 [了解更多](https://opencode.ai/docs/share)。
+分享当前会话。 [了解更多](05-分享.md)。
 
 ```
 /share
@@ -258,7 +258,7 @@ How is auth handled in @packages/functions/src/api/index.ts?
 
 ### [unshare](01-TUI.md#unshare)
 
-取消分享当前会话。 [了解更多](https://opencode.ai/docs/share#un-sharing)。
+取消分享当前会话。 [了解更多](05-分享.md#un-sharing)。
 
 ```
 /unshare

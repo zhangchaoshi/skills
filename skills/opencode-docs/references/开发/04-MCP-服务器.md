@@ -22,7 +22,7 @@
 
 ## [启用](04-MCP-服务器.md#%E5%90%AF%E7%94%A8)
 
-你可以在 [OpenCode 配置](https://opencode.ai/docs/config/) 的 `mcp` 字段下定义 MCP 服务器。为每个 MCP 指定一个唯一的名称，在提示词中可以通过该名称来引用对应的 MCP。
+你可以在 [OpenCode 配置](../02-配置.md) 的 `mcp` 字段下定义 MCP 服务器。为每个 MCP 指定一个唯一的名称，在提示词中可以通过该名称来引用对应的 MCP。
 
 ```
 {
@@ -82,7 +82,7 @@
 }
 ```
 
-本地配置值会覆盖远程默认值。详情请参阅 [配置优先级](https://opencode.ai/docs/config#precedence-order)。
+本地配置值会覆盖远程默认值。详情请参阅 [配置优先级](../02-配置.md#%E4%BC%98%E5%85%88%E7%BA%A7%E9%A1%BA%E5%BA%8F)。
 
 * * *
 
@@ -465,7 +465,7 @@ opencode mcp debug my-oauth-server
 如果你有大量 MCP 服务器，可以选择全局禁用它们，然后仅在特定代理中启用。具体做法：
 
 1. 全局禁用该工具。
-2. 在 [代理配置](https://opencode.ai/docs/agents#tools) 中，将 MCP 服务器作为工具启用。
+2. 在 [代理配置](01-代理.md#tools) 中，将 MCP 服务器作为工具启用。
 
 ```
 {
@@ -629,7 +629,7 @@ Show me the latest unresolved issues in my project. use sentry
 Configure a Cloudflare Worker script to cache JSON API responses for five minutes. use context7
 ```
 
-你也可以在 [AGENTS.md](https://opencode.ai/docs/rules/) 中添加类似的规则。
+你也可以在 [AGENTS.md](../配置/03-规则.md) 中添加类似的规则。
 
 ```
 When you need to search docs, use `context7` tools.
@@ -667,7 +667,7 @@ When you need to search docs, use `context7` tools.
 What's the right way to set a custom domain in an SST Astro component? use the gh_grep tool
 ```
 
-你也可以在 [AGENTS.md](https://opencode.ai/docs/rules/) 中添加类似的规则。
+你也可以在 [AGENTS.md](../配置/03-规则.md) 中添加类似的规则。
 
 ```
 If you are unsure how to do something, use `gh_grep` to search code examples from GitHub.
